@@ -21,7 +21,7 @@ language-based.cs
 
 
 -------------------------
-## JavaScript based
+## JavaScript based *
 javascript-based.md
 -------------------------
 [x]- Difference between var, let and const in JavaScript?
@@ -42,7 +42,7 @@ web-based.md
 
 
 -------------------------
-## Framework based
+## Framework based *
 framework-based.md
 -------------------------
 []- Entire mvc cycle
@@ -59,7 +59,7 @@ framework-based.md
 [x]- Suppose you want to display job postings on your Job Listings platform. How would you fetch and display them using MVC pattern? Walk me through the flow.
 
 -------------------------
-## SQL based
+## SQL based *
 sql-based.md
 -------------------------
 [x]- Dbms vs rdbms

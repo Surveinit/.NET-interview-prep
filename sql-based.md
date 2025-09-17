@@ -30,7 +30,9 @@
 -
 - LEFT JOIN returns all records from the left & matching records from the right.
 - RIGHT JOIN returns all records from the right & matching records from the left.
+- SELF JOIN joining the table with itself. Give emp and manager example.
 - INNER JOIN returns only matching records from both tables.
+- OUTER JOIN returns matching records from both tables plus NULL values where no matching.
 
 
 // []- SQL join, top 5 salaries.
@@ -55,6 +57,7 @@ LIMIT 5;
 // []- How to write procedures
 - 
 - A stored procedure is a set of SQL statements stored in the DB and executed as a program.
+
 - CREATE PROCEDURE procedure_name(parameters)
 BEGIN
  -- SQL statements
