@@ -6,10 +6,39 @@
 such as oracle, sql etc.
 - There are 2 types connnected and disconnected architecture.
 - Connected where you need to continuos connection with the database such as reading values.
-- Disconnected where you need to write to the db. eg; you make a copy of the datatables in the memory and make some changes and write them back
-by employing this you have less data redundancy.
 
-- Core componets of,
+---- 
+
+        // 1. Connection string (replace with your DB info)
+        string connectionString = "Server=localhost;Database=TestDB;    Trusted_Connection=True;";
+
+        // 2. SQL query
+        string query = "SELECT Id, Name, Department FROM Employees";
+
+        // 3. Open connection
+        using (SqlConnection conn = new SqlConnection(connectionString))
+        {
+            conn.Open();
+
+            // 4. Create command
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            // 5. Execute and read results
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    Console.WriteLine($"Id: {reader["Id"]}, Name: {reader["Name"]}, Dept: {reader["Department"]}");
+                }
+            }
+        }
+
+----
+
+- Disconnected where you need to write to the db. eg; you make a copy of the datatables in the memory and make some changes and write them back
+By employing this you have less data redundancy.
+
+- Core components of,
 1. Connection: Establishes a link between the application and the data source.
 2. Command: Executes SQL statements or stored procedures.
 3. DataReader: Provides fast, forward only, read only access to data.
@@ -65,6 +94,11 @@ $(document).ready(function() {
 - Which should we use today?
 - .NET core because its cross platform.
 
+// Difference between ADO.NET and EF Core?
+-
+ADO.NET is a lower-level data access technology where the developer writes SQL manually, manages connections, and works with DataReader or DataSet. It’s faster and gives full control but requires more boilerplate code.
+
+EF Core is an ORM built on top of ADO.NET that maps database tables to C# classes. It allows querying with LINQ and handles CRUD operations automatically. It improves productivity and maintainability, though it can be slightly slower than raw ADO.NET.
 
 // []- In Entity Framework Core, what’s the difference between Add(), Update(), and Attach()?
 - 

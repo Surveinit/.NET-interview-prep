@@ -55,6 +55,7 @@ framework-based.md
 [x]- Api
 [x]- Jquery with DataTables
 [x]- What’s the difference between .NET Framework and .NET Core?
+[x]- Difference between ADO.NET and EF Core?
 [x]- In Entity Framework Core, what’s the difference between Add(), Update(), and Attach()?
 [x]- Suppose you want to display job postings on your Job Listings platform. How would you fetch and display them using MVC pattern? Walk me through the flow.
 
@@ -64,6 +65,7 @@ sql-based.md
 -------------------------
 [x]- Dbms vs rdbms
 [x]- Sql vs mysql
+[]- MySql vs msServer
 [x]- Sql and oracle
 [x]- DDL, DML, DCL bullshit
 [x]- Sql joins

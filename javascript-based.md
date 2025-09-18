@@ -14,6 +14,11 @@
 -
 - jQuery is a JavaScript library used to simplify HTML document manipulation, event handling and AJAX requests. It makes JavaScript easier to write.
 
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#test").hide();
+  });
+
 - Why jQuery used less today?
 - Browsers now support many features natively like fetch for AJAX & querySelector for DOM.
 
